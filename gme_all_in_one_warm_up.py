@@ -298,8 +298,7 @@ for item in para_list:
         pred_emb = tf.reshape(pred_emb, [-1,len(tar_idx),k])
         return pred_emb
 
-    # based on GAT
-    # src_idx_ngb - e.g., cre_id in ngb; ft_idx_ngb - other fts used to compute the similarity
+    # GME-P
     def gen_emb_from_self_and_ngb_pre(data_embed_concat, data_embed_concat_ngb):
         ######### self attr #########
         # none * (len(attr_idx)*k)
@@ -342,8 +341,7 @@ for item in para_list:
 
         return pred_emb_self_new, wgt, nlz_wgt
 
-    # based on GAT
-    # src_idx_ngb - e.g., cre_id in ngb; ft_idx_ngb - other fts used to compute the similarity
+    # GME-G
     def gen_emb_from_self_and_ngb_gen(data_embed_concat, data_embed_concat_ngb):
         ######### self attr #########
         # none * (len(attr_idx)*k)
@@ -389,8 +387,7 @@ for item in para_list:
 
         return pred_emb_self_new, wgt, nlz_wgt
 
-    # based on GAT
-    # src_idx_ngb - e.g., cre_id in ngb; ft_idx_ngb - other fts used to compute the similarity
+    # GME-A
     def gen_emb_from_self_and_ngb_attr(data_embed_concat, data_embed_concat_ngb):
         ######### self attr #########
         # none * (len(attr_idx)*k)
@@ -425,7 +422,6 @@ for item in para_list:
         pred_emb = gamma * tf.nn.tanh(tf.matmul(up_attr_emb, W_meta))
         pred_emb = tf.reshape(pred_emb, [-1,len(tar_idx),k])
         return pred_emb, wgt, nlz_wgt
-
 
     def get_concate_embed_w_meta(data_embed_concat, pred_emb):
         cur_slot_idx = 0
