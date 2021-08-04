@@ -249,7 +249,6 @@ for item in para_list:
         return n_valid
 
     def gen_emb_from_self(data_embed_concat):
-        tf.stop_gradient(emb_mat)
         ######### self attr #########
         # none * (len(attr_idx)*k)
         attr_emb = get_sel_col(data_embed_concat, attr_idx)
@@ -259,7 +258,6 @@ for item in para_list:
         return pred_emb_self
 
     def get_emb_from_ngb(data_embed_concat_ngb, x_input_one_hot_ngb):
-        tf.stop_gradient(emb_mat)
         # none * max_n_ngb * (len(tar_idx) * k)
         ngb_emb = get_sel_col_ngb(data_embed_concat_ngb, tar_idx)
         n_valid_ngb = count_n_valid_ngb(x_input_one_hot_ngb)
@@ -270,9 +268,7 @@ for item in para_list:
         return pred_emb
 
     # GME-P
-    # src_idx_ngb - e.g., cre_id in ngb; ft_idx_ngb - other fts used to compute the similarity
     def gen_emb_from_self_and_ngb_pre(data_embed_concat, data_embed_concat_ngb):
-        tf.stop_gradient(emb_mat)
         ######### self attr #########
         # none * (len(attr_idx)*k)
         attr_emb = get_sel_col(data_embed_concat, attr_idx)
@@ -315,9 +311,7 @@ for item in para_list:
         return pred_emb_self_new, wgt, nlz_wgt
 
     # GME-G
-    # src_idx_ngb - e.g., cre_id in ngb; ft_idx_ngb - other fts used to compute the similarity
     def gen_emb_from_self_and_ngb_gen(data_embed_concat, data_embed_concat_ngb):
-        tf.stop_gradient(emb_mat)
         ######### self attr #########
         # none * (len(attr_idx)*k)
         attr_emb = get_sel_col(data_embed_concat, attr_idx)
@@ -363,9 +357,7 @@ for item in para_list:
         return pred_emb_self_new, wgt, nlz_wgt
 
     # GME-A
-    # src_idx_ngb - e.g., cre_id in ngb; ft_idx_ngb - other fts used to compute the similarity
     def gen_emb_from_self_and_ngb_attr(data_embed_concat, data_embed_concat_ngb):
-        tf.stop_gradient(emb_mat)
         ######### self attr #########
         # none * (len(attr_idx)*k)
         attr_emb = get_sel_col(data_embed_concat, attr_idx)
