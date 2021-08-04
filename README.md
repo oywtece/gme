@@ -118,6 +118,11 @@ Go to the **data** folder.
 unzip csv.zip
 bash run_tfrecord_writer.sh
 ```
+## Get Pre-trained DNN model Ready
+Go to the **tmp** folder.
+```bash
+unzip dnn_1011_1705.zip
+```
 
 ## Config
 ### Validation and hyperparameter tuning
