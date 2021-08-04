@@ -112,6 +112,13 @@ train_oneshot_c_w_ngb.csv \
 train_oneshot_d_w_ngb.csv \
 test_test_w_ngb.csv
 
+## Get Sample Data Ready
+Go to the **data** folder.
+```bash
+unzip csv.zip
+bash run_tfrecord_writer.sh
+```
+
 ## Config
 ### Validation and hyperparameter tuning
 You can set multiple values for hyperparameters. \
@@ -135,7 +142,7 @@ Train GME
 nohup python gme_all_in_one.py > gme_[output_file_name].out 2>&1 &
 ```
 Train DNN
-* This step is not necessary because one saved DNN model is already provided in the 'tmp' folder.
+* This step is **not necessary** because one saved DNN model is already provided in the 'tmp' folder.
 ```bash
 nohup python dnn.py > dnn_[output_file_name].out 2>&1 &
 ```
