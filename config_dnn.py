@@ -16,7 +16,7 @@ test_file_name = [pre+'test_oneshot_a'+suf]
 n_ft = 11134
 input_format = 'tfrecord' #'csv'
 time_style = '%Y-%m-%d %H:%M:%S'
-rnd_seed = 123 # random set (different seeds lead to different results)
+rnd_seed = 123 # random seed (different seeds lead to different results)
 
 # if you want to tune model paras, do not save model; you can enter several values in 'eta_range' and 'batch_size_range'
 # if you want to save model, then enter only one value in 'eta_range' and 'batch_size_range'
