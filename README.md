@@ -1,6 +1,8 @@
 # Graph Meta Embedding (GME)
 Graph Meta Embedding (GME) models for generating initial ID embeddings for cold-start ads in CTR/CVR prediction.
 
+<img src="https://github.com/oywtece/gme/blob/main/gme.png" alt="gme model structure" width="1200"/>
+
 If you use this code, please cite the following paper:
 * **Learning Graph Meta Embeddings for Cold-Start Ads in Click-Through Rate Prediction. In SIGIR, ACM, 2021.**
 
