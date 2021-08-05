@@ -40,7 +40,7 @@ attr_idx = [5,6,7]
 n_ft = 11134
 input_format = 'tfrecord' #'csv'
 time_style = '%Y-%m-%d %H:%M:%S'
-rnd_seed = 123 # random set (different seeds lead to different results)
+rnd_seed = 123 # random seed (different seeds lead to different results)
 att_dim = 10*len(attr_idx)
 batch_size = 128 # used for warm up training
 
