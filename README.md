@@ -118,7 +118,7 @@ Go to the **data** folder.
 unzip csv.zip
 bash run_tfrecord_writer.sh
 ```
-## Get Pre-trained DNN model Ready
+## Get Pre-trained DNN Model Ready
 Go to the **tmp** folder.
 ```bash
 unzip dnn_1011_1705.zip
@@ -142,11 +142,11 @@ Example: eta_range = [0.02]
 * gme_all_in_one_warm_up.py - GME model, with warm-up training (need to set warm_up_bool=True)
 
 ## Run the Code
-Train GME
+Train & Test GME
 ```bash
 nohup python gme_all_in_one.py > gme_[output_file_name].out 2>&1 &
 ```
-Train DNN
+Train & Test DNN
 * This step is **not necessary** because one saved DNN model is already provided in the 'tmp' folder.
 ```bash
 nohup python dnn.py > dnn_[output_file_name].out 2>&1 &
