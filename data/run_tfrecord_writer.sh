@@ -18,6 +18,8 @@ name=test_oneshot_c
 cat ${name}.csv | python tfrecord_writer_new.py ${name}
 name=test_test
 cat ${name}.csv | python tfrecord_writer_new.py ${name}
+name=test_oneshot_a_w_ngb
+cat ${name}.csv | python tfrecord_writer_new.py ${name}
 name=test_test_w_ngb
 cat ${name}.csv | python tfrecord_writer_new.py ${name}
 
