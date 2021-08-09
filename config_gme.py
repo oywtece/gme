@@ -27,6 +27,7 @@ train_file_name_b = [pre+'train_oneshot_b_w_ngb'+suf, pre+'train_oneshot_c_w_ngb
 train_file_name_warm = [pre+'test_oneshot_a'+suf]
 train_file_name_warm_2 = [pre+'test_oneshot_b'+suf]
 
+# you can use 'test_oneshot_a_w_ngb' for validation
 test_file_name = [pre+'test_test_w_ngb'+suf]
 
 # the following are indices for features (excluding label)
